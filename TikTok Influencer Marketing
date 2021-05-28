@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <title>TikTok Influencer Marketing</title>
+<body>
+  <div style="text-align: left;">
+    <h1>Rise of TikTok Influencer Marketing</h1></div>
+</body>
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Year', 'Rise'],
+          ['2018',  16394 ],
+          ['2019',  35528 ],
+          ['2020',  106104 ]
+          
+        ]);
+
+        var options = {
+          title: 'Growth in number of TikTok Influencers',
+          curveType: 'function',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="curve_chart" style="width: 900px; height: 500px"></div>
+  </body>
+</html>
